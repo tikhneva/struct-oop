@@ -4,11 +4,14 @@
 #include <iostream>
 using namespace std;
 
-class Human 
+class Human
 {
 public:
     string name;
     string message;
+
+private:
+
 public:
     void HearSomething()
     {
@@ -16,7 +19,7 @@ public:
     }
 };
 
-class Parrot 
+class Parrot
 {
 public:
     string name;
@@ -39,7 +42,7 @@ public:
     }
 };
 
-class IPhone 
+class IPhone
 {
 public:
     string name;
@@ -53,7 +56,7 @@ public:
     }
 };
 
-class Music 
+class Music
 {
 public:
     string name;
@@ -63,14 +66,13 @@ public:
     void PlaySound()
     {
         cout << "And the music suddenly started playing\n";
-
+        cout << lyrics << "\n";
     }
 };
 
 
 int main()
 {
-    //тип_об'єкту ім'я;
     int x;
     double d;
 
@@ -83,21 +85,18 @@ int main()
     p.action = "Sarah crashed into the window\n";
     p.DoSomething();
 
-    Human h; 
+    Human h;
     h.name = "Alice";
     h.message = "Surprised Alice entered the room\n";
+    h.HearSomething();
 
-
-    IPhone i; 
+    IPhone i;
     i.name = "13 mini";
-
-    //передача повідомлення
     i.Something(h);
-    //first_об'єкт.метод(second об'єкт);
 
     Music m;
     m.name = "Circus";
-    m.lyrics = "Welcome to the zone\n";
+    m.lyrics = "...Welcome to the zone...\n";
     m.PlaySound();
 
 
